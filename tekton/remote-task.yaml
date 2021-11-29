@@ -1,0 +1,14 @@
+apiVersion: tekton.dev/v1alpha1
+kind: Task
+metadata:
+  name: remote
+  namespace: tektn-hello
+spec:
+  steps:
+  - name: remote-step
+    image: image-registry.openshift-image-registry.svc:5000/openshift/cli:latest
+    command:
+    - /bin/bash
+    - -c
+    - |
+      echo Running on remote cluster
