@@ -12,7 +12,7 @@ spec:
       default: "k8"
   steps:
     - name: apply
-      image: image-registry.openshift-image-registry.svc:5000/openshift/cli:latest
+      image: image-registry.openshift-image-registry.svc:5000/tekton-helloworld/check:latest
       workingDir: /workspace/source
       command: ["/bin/bash", "-c"]
       args:
